@@ -1,0 +1,115 @@
+/* Playz Dark Mode CSS */
+:root {
+    --playz-accent: #ff7bdc;
+    --playz-background: #0b0d1f;
+    --playz-background-light: #111324;
+    --playz-text: #ffffff;
+}
+
+body,
+html,
+#app {
+    background: var(--playz-background) !important;
+    color: var(--playz-text) !important;
+}
+
+button,
+.emby-button,
+.paper-icon-button-light,
+.fab,
+.raised {
+    background: var(--playz-accent) !important;
+    border-color: var(--playz-accent) !important;
+}
+a,
+.actionSheetMenuItem:hover {
+    color: var(--playz-accent) !important;
+}
+
+imgLogoIcon,
+.imgLogoIcon,
+.layout-logo img {
+  content: url("https://raw.githubusercontent.com/PlayzStudioz/PlayzMedia-Images/main/assets/playz_logo_256.png") !important;
+  filter: drop-shadow(0px 0px 4px var(--playz-accent));
+}
+
+.loginContainer {
+    background: url("https://raw.githubusercontent.com/PlayzStudioz/PlayzMedia-Images/main/assets/login_background_1920x1080.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+#loginPage .inputContainer input {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid var(--playz-accent) !important;
+    color: white !important;
+}
+
+:root {
+    --tv-scale: 1.35;
+}
+
+.card,
+.cardImageContainer {
+    transform: scale(var(--tv-scale));
+    margin: 22px !important;
+}
+
+.primaryItems,
+.sectionTitle,
+.itemName {
+    font-size: calc(1.1rem * var(--tv-scale)) !important;
+    font-weight: 700 !important;
+}
+
+.emby-button,
+.button-flat,
+.paper-icon-button-light {
+    transform: scale(1.25) !important;
+}
+
+.card:hover,
+button:hover,
+.emby-button:hover {
+    filter: drop-shadow(0px 0px 6px var(--playz-accent));
+}
+
+#searchInput {
+    border: 2px solid var(--playz-accent) !important;
+    background: rgba(255,255,255,0.03) !important;
+    color: var(--playz-text) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--playz-accent);
+}
+::-webkit-scrollbar-track {
+    background: var(--playz-background-light);
+}
+
+#loadingScreen,
+.loadingContainer {
+    background: var(--playz-background) !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadingScreen:before {
+    content: "";
+    background-image: url("https://raw.githubusercontent.com/PlayzStudioz/PlayzMedia-Images/main/assets/playz_logo_512.png");
+    background-size: 220px;
+    width: 220px;
+    height: 220px;
+    animation: playzGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes playzGlow {
+    0% { filter: drop-shadow(0 0 0 var(--playz-accent)); opacity: 0.5; }
+    50%{ filter: drop-shadow(0 0 18px var(--playz-accent)); opacity: 1; }
+    100%{ filter: drop-shadow(0 0 0 var(--playz-accent)); opacity: 0.5; }
+}
+
+.pageTitleWithLogo .logo {
+    display: none !important;
+}
